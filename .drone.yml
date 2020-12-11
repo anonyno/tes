@@ -3,8 +3,8 @@ type: docker
 name: Drone CI
 
 platform:
-  os: netbsd
-  arch: amd64
+  os: linux
+  arch: arm
 
 steps:
   - name: Try it
