@@ -8,10 +8,9 @@ platform:
 
 steps:
   - name: Try it
-    image: docker.io/library/alpine:latest
+    image: docker.io/library/archlinux:base-devel
     commands:
-      - "apk --update --no-cache upgrade"
-      - "apk add --no-cache openssl"
+      - "pacman -Syu openssl"
       - "nproc"
       - "cat /proc/cpuinfo"
       - "openssl speed -evp sha256"
