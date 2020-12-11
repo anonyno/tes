@@ -10,7 +10,7 @@ jobs:
     container: archlinux:base-devel
     steps:
       - name: Install
-      - run: |
+        run: |
           pacman -Syu --noconfirm openssl
       - name: Bench
         run: |
