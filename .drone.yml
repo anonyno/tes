@@ -2,7 +2,12 @@ kind: pipeline
 type: docker
 name: Drone CI
 
+platform:
+  os: netbsd
+  arch: amd64
+
 steps:
   - name: Try it
+    image: docker.io/library/alpine:latest
     commands:
-      - 'uname -a'
+      - "uname -a"
