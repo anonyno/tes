@@ -3,11 +3,15 @@ type: docker
 name: Drone CI
 
 platform:
-  os: windows
-  arch: amd64
+  os: linux
+  arch: arm64
 
 steps:
   - name: Try it
     image: docker.io/library/alpine:latest
     commands:
-      - "uname -a"
+      - "apk --update --no-cache upgrade"
+      - "apk add --no-cache openssl"
+      - "nproc"
+      - "cat /proc/cpuinfo"
+      - "openssl speed -evp sha256"
