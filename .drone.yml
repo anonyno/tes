@@ -10,7 +10,7 @@ steps:
   - name: Try it
     image: docker.io/library/archlinux:base-devel
     commands:
-      - "pacman -Syu openssl"
+      - "pacman -Syu --noconfirm openssl"
       - "nproc"
       - "cat /proc/cpuinfo"
       - "openssl speed -evp sha256"
