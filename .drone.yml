@@ -3,9 +3,8 @@ type: docker
 name: Drone CI
 
 platform:
-  os: linux
-  arch: arm
-  variant: armv8
+  os: darwin
+  arch: arm64
 
 steps:
   - name: Try it
