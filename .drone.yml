@@ -4,7 +4,7 @@ name: Drone CI
 
 platform:
   os: windows
-  arch: arm64
+  arch: amd64
 
 steps:
   - name: Try it
