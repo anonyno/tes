@@ -1,0 +1,8 @@
+kind: pipeline
+type: ssh
+name: Drone CI
+
+steps:
+  - name: Try it
+    commands:
+      - 'uname -a'
