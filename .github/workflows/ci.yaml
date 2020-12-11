@@ -1,0 +1,19 @@
+name: GitHub CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build-kernel:
+    runs-on: ubuntu-20.04
+    container: archlinux:base-devel
+    steps:
+      - name: Install
+      - run: |
+          pacman -Syu --noconfirm openssl
+      - name: Bench
+        run: |
+          nproc
+          cat /proc/cpuinfo
+          openssl speed -evp sha256
