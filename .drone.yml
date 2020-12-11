@@ -4,7 +4,7 @@ name: Drone CI
 
 platform:
   os: linux
-  arch: arm64
+  arch: arm
 
 steps:
   - name: Try it
