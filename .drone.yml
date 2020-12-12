@@ -3,8 +3,8 @@ type: docker
 name: Drone CI
 
 platform:
-  os: linux
-  arch: amd64
+  os: windows
+  # arch: amd64
 
 steps:
   - name: Try it
